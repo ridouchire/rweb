@@ -1,0 +1,17 @@
+{
+  "use-cscope": null,
+  "tag-dir": null,
+  "filter": {
+    "php-file-ext-list": [
+      "php"
+    ],
+    "php-path-list": [
+        "./src",
+        "./tests",
+        "./vendor/symfony/http-foundation",
+        "./vendor/catfan/medoo",
+        "./vendor/phpunit/phpunit"
+    ],
+    "php-path-list-without-subdir": []
+  }
+}
