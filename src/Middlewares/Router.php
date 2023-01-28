@@ -37,7 +37,10 @@ class Router implements IMiddleware
     {
         $dispatcher = new Dispatcher($this->collector->getData());
 
-        $routeInfo = $dispatcher->dispatch($req->getMethod(), $req->getPathInfo());
+        $path = $req->getPathInfo();
+        $path = preg_replace('/\/$/', '', $path);
+
+        $routeInfo = $dispatcher->dispatch($req->getMethod(), $path);
 
         switch ($routeInfo[0]) {
             case Dispatcher::NOT_FOUND:
